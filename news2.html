@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>News Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .news-item {
+            background-color: #f0f0f0;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .news-item:hover {
+            background-color: #e0e0e0;
+        }
+
+        .news-item .date {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .news-item .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .news-item .content {
+            line-height: 1.6;
+        }
+
+        .news-item .content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-item img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="news-item">
+            <div class="date">June 12, 2023</div>
+            <div class="title">Exciting Announcement</div>
+            <img src="path_to_image.jpg" alt="News Image">
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam consectetur accumsan.</p>
+                <p>Donec rutrum ligula a vehicula laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <div class="date">June 10, 2023</div>
+            <div class="title">New Project Launch</div>
+            <img src="path_to_image.jpg" alt="News Image">
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam consectetur accumsan.</p>
+                <p>Donec rutrum ligula a vehicula laoreet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            </div>
+        </div>
+
+        <!-- Add more news items here -->
+    </div>
+</body>
+</html>

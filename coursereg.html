@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" type="text/css" href="Styles/coursereg.css">
+</head>
+<body>
+  <nav class="navtop">
+    <div>
+      
+      <a href="landingpage.html"><i class="fas fa-home"></i>Home</a>
+      <a href="aboutme.html"><i class="fas fa-user-circle"></i>About me</a>
+      <a href="register.html"><i class="fas fa-sign-in"></i>Register</a>
+      <a href="courses.php"><i class="fas fa-pen"></i>Courses</a>
+      <a href="cv.php"><i class="fas fa-id-card"></i>Cv</a>
+      <a href="communityengagement.html"><i class="fas fa-people-group"></i>Community engagement</a>
+      <a href="news.html"><i class="fas fa-newspaper"></i>News</a>
+      <a href="library.php"><i class="fas fa-book-open"></i>Library</a>
+      <a href="contact.php"><i class="fas fa-contact-book"></i>Contacts</a>
+      <a href="logout.php"><i class="fas fa-sign-out"></i>Logout</a>
+    </div>
+  </nav>
+  
+  <div class="form-group">
+    <h1>Course Register</h1>
+  <form action="courseregister.php" method="post" autocomplete="on">
+
+      <label for="coursename">Course Name:</label>
+      <select id="coursename" name="coursename">
+        <option value="">Select a course</option>
+        <option value="course1">Course 1</option>
+        <option value="course2">Course 2</option>
+        <option value="course3">Course 3</option>
+        <!-- Add more options as needed -->
+      </select>
+   
+      <label for="coursecode">Course Code</label>
+      <select id="coursecode" name="coursecode">
+        <option value="">Select course code</option>
+        <option value="course1">Code 1</option>
+        <option value="course2">Code 2</option>
+        <option value="course3">Code 3</option>
+        <!-- Add more options as needed -->
+      </select>
+  
+      <label for="department">Course Department:</label>
+      <select id="department" name="department">
+        <option value="">Select a department</option>
+        <option value="dept1">Department 1</option>
+        <option value="dept2">Department 2</option>
+        <option value="dept3">Department 3</option>
+        <!-- Add more options as needed -->
+      </select>
+  
+      <label for="semester">Course Semester:</label>
+      <select id="semester" name="semester">
+        <option value="">Select a semester</option>
+        <option value="semester 1">Semester 1</option>
+        <option value="semester 2">Semester 2</option>
+      </select>
+
+      <label for="coursedescription">Course Description:</label>
+      <input type="text" id="coursedescription" name="coursedescription" required>
+
+      <label for="instructor_name">Instructors name:</label>
+      <input type="text" id="instructor_name" name="instructor_name" required>
+
+      <label for="courseyear">Year:</label>
+      <input type="text" id="courseyear" name="courseyear" required>
+
+      <label for="results">Course Results:</label>
+      <input type="text" id="results" name="results" required>
+    
+      <input type="submit" value="Register">
+  </form>
+</div>
+</body>
+</html>

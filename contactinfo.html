@@ -1,0 +1,78 @@
+<?php 
+$server_name = "localhost";
+$username = "root";
+$password = "";
+$database_name = "my_contacs";
+
+$conn = new mysqli($server_name, $username, $password, $database_name); // Create connection with the database
+
+if ($conn->connect_error) { // Check the connection to verify if its succesful
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM details";  //Writing query for all the students 
+
+$result = $conn->query($sql); //Making the query and getting the data
+?> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="Styles/table.css" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <?php 
+        if ($result->num_rows > 0) { //If the database has data, 'num_rows' returns the number of rows in table
+		?> 
+    <div class="table-wrapper">
+  <table align="center" class="fl-table" border="1px" style="width:600px; line-height:40px;">
+    
+        <tr>
+            <td colspan="2"><h2>Contact Us</h2></td>
+        </tr>
+    <?php //Whenever you see this just know im using php inside html so i need the compiler to know that this is php not otherwise
+
+        while($book = $result->fetch_assoc())  //Array to output data of each row, 'fetch_assoc' fetches a result row as an associative array
+        { 
+    ?> <!--This is the closing tag of php-->
+      <tr>
+        <th>Email</th>
+        <td><a href="mailto:eridericgeorge@gmail.com"> <i class="fa fa-envelope"></i> </a><?php echo $book['email']; ?></td> 
+      </tr>
+    
+      <tr>
+        <th>Phone</th>
+        <td><i class="fas fa-phone"></i><?php echo $book['phone']; ?></td> 
+      </tr>
+
+      <tr>
+        <th>Twitter</th>
+        <td><a href="www.twitter.com/deedopezy"> <i class="fa fa-twitter"></i> </a><?php echo $book['twitter']; ?></td> 
+      </tr>
+
+      <tr>
+        <th>Instagram</th>
+        <td><a href="www.instagram.com/lilsavage.md"> <i class="fa fa-instagram"></i> </a><?php echo $book['instagram']; ?></td> 
+      </tr>
+
+      <tr>
+        <th>Facebook</th>
+        <td><a href="www.facebook.com/deedopezy"> <i class="fa fa-facebook"></i> </a><?php echo $book['facebook']; ?></td> 
+      </tr>
+
+      <tr>
+        <th id="address">Physical address</th>
+        <td><i class="fas fa-home"></i><?php echo $book['address']; ?></td> 
+      </tr>
+      <?php 
+            } }else {
+        echo "0 results";
+    }           
+$conn->close(); //This closes the connection to the database
+    ?> 
+  </table>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+        <link href="Styles/register.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				
+				<a href="landingpage.html"><i class="fas fa-home"></i>Home</a>
+				<a href="aboutme.html"><i class="fas fa-user-circle"></i>About me</a>
+				<a href="register.html"><i class="fas fa-sign-in"></i>Register</a>
+				<a href="courses.php"><i class="fas fa-pen"></i>Courses</a>
+				<a href="cv.php"><i class="fas fa-id-card"></i>Cv</a>
+				<a href="communityengagement.html"><i class="fas fa-people-group"></i>Community engagement</a>
+				<a href="news.html"><i class="fas fa-newspaper"></i>News</a>
+				<a href="library.php"><i class="fas fa-book-open"></i>Library</a>
+				<a href="contact.php"><i class="fas fa-contact-book"></i>Contacts</a>
+				<a href="logout.php"><i class="fas fa-sign-out"></i>Logout</a>
+			</div>
+		</nav>
+		<div class="register">
+			<center><h1>Register</h1></center>
+			<form action="register.php" method="post" autocomplete="on" enctype="multipart/form-data">
+
+                <label for="firstname">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="firstname" placeholder="Firstname" id="firstname" required>
+                <label for="middlename">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="middlename" placeholder="Middlename" id="middlename" required>
+                <label for="surname">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="surname" placeholder="Surname" id="surname" required>
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+				<label for="email">
+					<i class="fas fa-envelope"></i>
+				</label>
+				<input type="email" name="email" placeholder="Email" id="email" required>
+				<label for="mobile">
+					<i class="fas fa-phone"></i>
+				</label>
+				<input type="text" name="mobile" placeholder="Mobile number" id="mobile" required>
+				<label for="social">
+					<i class="fas fa-twitter"></i>
+				</label>
+				<input type="text" name="social" placeholder="Facebook/Instagram/Twitter" id="social" required>
+				<label for="cv">
+					<i class="fas fa-file"></i>
+				</label>
+				<input type="file" name="file" id="file" required>
+				<input type="submit" value="Register">
+				<h3>
+					Already a member? <a href="login.html">Sign in</a>
+				</h3>
+			</form>
+		</div>
+	</body>
+</html>
